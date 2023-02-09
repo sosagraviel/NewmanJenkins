@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "8a60ae5b-4e00-44ab-8614-cfe2f12802f8",
+		"name": "Newman collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7447686"
+	},
+	"item": [
+		{
+			"name": "first request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://run.mocky.io/v3/e2b26b3f-9126-4364-b0f5-533475970c49",
+					"protocol": "https",
+					"host": [
+						"run",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v3",
+						"e2b26b3f-9126-4364-b0f5-533475970c49"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.getpostman.com/collections/7447686-8a60ae5b-4e00-44ab-8614-cfe2f12802f8?access_key=PMAT-01GRMPM1KMWB063E7GP1XSZN8P",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.getpostman.com/collections/7447686-8a60ae5b-4e00-44ab-8614-cfe2f12802f8?access_key=PMAT-01GRMPM1KMWB063E7GP1XSZN8P",
+					"protocol": "https",
+					"host": [
+						"api",
+						"getpostman",
+						"com"
+					],
+					"path": [
+						"collections",
+						"7447686-8a60ae5b-4e00-44ab-8614-cfe2f12802f8"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "PMAT-01GRMPM1KMWB063E7GP1XSZN8P"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get collections",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.getpostman.com/collections?apikey=PMAK-5eebeeb63283d10035290e94-23e12299abe98b3167013be5ac40b477aa",
+					"protocol": "https",
+					"host": [
+						"api",
+						"getpostman",
+						"com"
+					],
+					"path": [
+						"collections"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "PMAK-5eebeeb63283d10035290e94-23e12299abe98b3167013be5ac40b477aa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get environment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.getpostman.com/environments?apikey=PMAK-5eebeeb63283d10035290e94-23e12299abe98b3167013be5ac40b477aa",
+					"protocol": "https",
+					"host": [
+						"api",
+						"getpostman",
+						"com"
+					],
+					"path": [
+						"environments"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "PMAK-5eebeeb63283d10035290e94-23e12299abe98b3167013be5ac40b477aa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "path Variables",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://simple-books-api.glitch.me/books/:bookId",
+					"protocol": "https",
+					"host": [
+						"simple-books-api",
+						"glitch",
+						"me"
+					],
+					"path": [
+						"books",
+						":bookId"
+					],
+					"variable": [
+						{
+							"key": "bookId",
+							"value": "1",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "How use the function filter in Json",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"// const response = pm.response.json();",
+							"// const book = response.filter((book) => book.available === true);",
+							"// console.log(book[0]);",
+							"",
+							"// pm.test(\"validate if object type\", ()=>{",
+							"//     pm.expect(book[0]).to.be.an('object');",
+							"// })"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://simple-books-api.glitch.me/books?type=non-fiction",
+					"protocol": "https",
+					"host": [
+						"simple-books-api",
+						"glitch",
+						"me"
+					],
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "non-fiction"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "How hande a key with hyphen",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"// const response = pm.response.json();",
+							"",
+							"// pm.test(\"Is in stock\", ()=>{",
+							"//     pm.expect(response['current-stock']).to.be.above(2);",
+							"// })"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://simple-books-api.glitch.me/books/1",
+					"protocol": "https",
+					"host": [
+						"simple-books-api",
+						"glitch",
+						"me"
+					],
+					"path": [
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "How jump a request or stop",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// postman.setNextRequest(\"name of request\")-> the name of the request where you wanna go.",
+							"// postman.setNextRequest(null)-> when you wanna stop right there the flow ."
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://simple-books-api.glitch.me/books/1",
+					"protocol": "https",
+					"host": [
+						"simple-books-api",
+						"glitch",
+						"me"
+					],
+					"path": [
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
