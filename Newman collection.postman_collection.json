@@ -25,7 +25,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://run.mocky.io/v3/e2b26b3f-9126-4364-b0f5-533475970c49",
+					"raw": "https://run.mocky.io/v3/96b3d7f1-229a-459c-bf37-6cc5bbe9c295",
 					"protocol": "https",
 					"host": [
 						"run",
@@ -34,47 +34,7 @@
 					],
 					"path": [
 						"v3",
-						"e2b26b3f-9126-4364-b0f5-533475970c49"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "https://api.getpostman.com/collections/7447686-8a60ae5b-4e00-44ab-8614-cfe2f12802f8?access_key=PMAT-01GRMPM1KMWB063E7GP1XSZN8P",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://api.getpostman.com/collections/7447686-8a60ae5b-4e00-44ab-8614-cfe2f12802f8?access_key=PMAT-01GRMPM1KMWB063E7GP1XSZN8P",
-					"protocol": "https",
-					"host": [
-						"api",
-						"getpostman",
-						"com"
-					],
-					"path": [
-						"collections",
-						"7447686-8a60ae5b-4e00-44ab-8614-cfe2f12802f8"
-					],
-					"query": [
-						{
-							"key": "access_key",
-							"value": "PMAT-01GRMPM1KMWB063E7GP1XSZN8P"
-						}
+						"96b3d7f1-229a-459c-bf37-6cc5bbe9c295"
 					]
 				}
 			},
@@ -87,7 +47,7 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
+							"pm.test(\"Response status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
@@ -99,7 +59,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://api.getpostman.com/collections?apikey=PMAK-5eebeeb63283d10035290e94-23e12299abe98b3167013be5ac40b477aa",
+					"raw": "https://api.getpostman.com/collections?apikey=PMAK-657a584f6459d400385f00f0-34fee2bbfc4952fa93c08cdc9a4d15ac48",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -112,7 +72,7 @@
 					"query": [
 						{
 							"key": "apikey",
-							"value": "PMAK-5eebeeb63283d10035290e94-23e12299abe98b3167013be5ac40b477aa"
+							"value": "PMAK-657a584f6459d400385f00f0-34fee2bbfc4952fa93c08cdc9a4d15ac48"
 						}
 					]
 				}
@@ -138,7 +98,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://api.getpostman.com/environments?apikey=PMAK-5eebeeb63283d10035290e94-23e12299abe98b3167013be5ac40b477aa",
+					"raw": "https://api.getpostman.com/environments?apikey=PMAK-657a584f6459d400385f00f0-34fee2bbfc4952fa93c08cdc9a4d15ac48",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -151,7 +111,7 @@
 					"query": [
 						{
 							"key": "apikey",
-							"value": "PMAK-5eebeeb63283d10035290e94-23e12299abe98b3167013be5ac40b477aa"
+							"value": "PMAK-657a584f6459d400385f00f0-34fee2bbfc4952fa93c08cdc9a4d15ac48"
 						}
 					]
 				}
@@ -209,9 +169,9 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"// const response = pm.response.json();",
-							"// const book = response.filter((book) => book.available === true);",
-							"// console.log(book[0]);",
+							"const response = pm.response.json();",
+							"const book = response.filter((book) => book.available === true);",
+							"console.log(book);",
 							"",
 							"// pm.test(\"validate if object type\", ()=>{",
 							"//     pm.expect(book[0]).to.be.an('object');",
@@ -318,6 +278,34 @@
 						"1"
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "one environment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.getpostman.com/environments/61b2bd80-2277-44c6-a24e-7498fbadbcde?apikey=PMAK-657a584f6459d400385f00f0-34fee2bbfc4952fa93c08cdc9a4d15ac48",
+					"protocol": "https",
+					"host": [
+						"api",
+						"getpostman",
+						"com"
+					],
+					"path": [
+						"environments",
+						"61b2bd80-2277-44c6-a24e-7498fbadbcde"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "PMAK-657a584f6459d400385f00f0-34fee2bbfc4952fa93c08cdc9a4d15ac48"
+						}
+					]
+				},
+				"description": "[https://api.getpostman.com/environments/$uid?apikey=$apiKey](https://api.getpostman.com/environments/$uid?apikey=$apiKey)"
 			},
 			"response": []
 		}
